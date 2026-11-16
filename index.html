@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Land and Urban Economics</title>
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png?v=1">
+<link rel="icon" type="image/png" sizes="256x256" href="img/favicon-256.png?v=1">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=1">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Course hub. Cream cabinets, rose accents, pink footer. */
+:root{
+  --canvas:#C9D2DC; --canvas-lt:#D6DDE5; --canvas-dk:#BAC5D1; --pink:#E3A6AC;
+  --olive:#637040; --olive-lt:#9FB295; --rose:#A34860; --slate:#4F5D75;
+  --trim:#C8A030; --trim-dk:#9A7B24; --neutral:#F0E8D8; --label-bg:#FAF4E8;
+  --ink:#2C1F14; --ink-warm:#6E5140; --rule:#D8C8A0;
+  --display:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
+  --mono:"IBM Plex Mono","Courier New",monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--canvas);background-image:linear-gradient(172deg,var(--canvas-lt) 0%,var(--canvas) 55%,var(--canvas-dk) 100%);color:var(--ink);font-family:var(--display);font-size:19px;line-height:1.5;padding-block:36px 0;padding-inline:16px;position:relative}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.09;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='none' stroke='%239A7B24' stroke-width='1.3' stroke-linejoin='round'%3E%3Cpath d='M45 5 L85 45 L45 85 L5 45 Z'/%3E%3Cpath d='M45 20 L70 45 L45 70 L20 45 Z'/%3E%3Cpath d='M45 33 L57 45 L45 57 L33 45 Z'/%3E%3C/g%3E%3Ccircle cx='45' cy='45' r='2.2' fill='%239A7B24'/%3E%3C/svg%3E");background-size:90px 90px}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;mix-blend-mode:multiply;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E")}
+.wrap{position:relative;z-index:1;max-width:920px;margin:0 auto;display:grid;gap:0;justify-items:center;text-align:center}
+.wrap>*{width:100%}
+h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.1;text-wrap:balance;margin:0;text-transform:uppercase;letter-spacing:.18em;color:var(--rose)}
+h1{font-size:clamp(2.2rem,6.5vw,4rem);letter-spacing:.26em;padding-left:.26em}
+h3{font-size:1.15rem;letter-spacing:.14em}
+p{margin:0 auto;max-width:62ch}
+.aux{font-size:.95rem;color:var(--ink-warm);font-style:italic}
+.tag{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--trim);color:var(--rose);padding:3px 10px;border-radius:999px;background:var(--label-bg);display:inline-block}
+.sign{display:inline-block;background:var(--rose);color:var(--neutral);border:1px solid var(--trim);border-radius:999px;padding:6px 20px;font-size:.9rem;letter-spacing:.24em;text-transform:uppercase}
+.orn{color:var(--trim);letter-spacing:.6em;padding-left:.6em;font-size:.95rem}
+.node{display:grid;justify-items:center;padding-block:26px}
+.node .stem{width:1px;height:28px;background:var(--trim)}
+.node .dot{width:11px;height:11px;background:var(--trim);transform:rotate(45deg);margin:6px 0}
+.node .tag{margin-top:6px}
+.frame{position:relative;background:var(--neutral);border:1px solid var(--trim);border-radius:14px;padding:26px 22px 28px;display:grid;gap:16px;justify-items:center}
+.frame::after{content:"";position:absolute;inset:6px;border:1px solid var(--trim);border-radius:9px;pointer-events:none}
+.frame>*{position:relative;z-index:1}
+.hero{width:100%;max-width:760px;aspect-ratio:1370/980;overflow:hidden;border:1px solid var(--trim);border-radius:10px;position:relative;background:var(--label-bg)}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.hero::after{content:"";position:absolute;inset:7px;border:1px solid var(--trim);border-radius:6px;pointer-events:none}
+.credit{font-size:.78rem;margin-top:-8px}
+.title{display:grid;gap:6px;justify-items:center}
+.title .small{font-size:clamp(.85rem,2vw,1.1rem);letter-spacing:.4em;padding-left:.4em;color:var(--rose);text-transform:uppercase;font-weight:300}
+.title .by{font-size:1rem;color:var(--ink-warm);line-height:1.5}
+.credits{font-size:.72rem;color:var(--ink-warm);margin-top:18px}
+.slide .head{display:grid;gap:8px;justify-items:center}
+.person{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:center;width:100%;max-width:760px;text-align:left}
+.person img{width:100%;border:1px solid var(--trim);border-radius:10px;display:block}
+.person .bio{display:grid;gap:8px}
+.person .bio p{max-width:none;font-size:1rem;margin:0}
+.person .bio .credit{margin-top:0}
+@media (max-width:560px){.person{grid-template-columns:1fr;justify-items:center;text-align:center}.person img{max-width:220px}}
+.qrs{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.ucam{width:180px;max-width:60%;display:block;margin-top:4px}
+.qr .att{width:150px;height:150px;border:1px solid var(--trim);border-radius:6px;background:#FAF4E8;padding:6px;display:block}
+.qr .small2{font-size:.78rem;display:block;max-width:22ch}
+.qr{display:grid;grid-template-columns:auto auto;gap:14px;align-items:center;justify-content:center;border:1px solid var(--trim);border-radius:12px;background:var(--label-bg);padding:10px 16px}
+.qr #qr{width:150px;height:150px;border:1px solid var(--trim);border-radius:6px;background:#FAF4E8;padding:6px}
+.qr #qr img,.qr #qr canvas{width:100%!important;height:100%!important;display:block}
+.qr .url{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--rose);font-style:normal}
+.slide h2{font-size:1.5rem}
+.quote{font-style:italic;font-size:1.1rem;max-width:62ch;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:12px 6px;color:var(--ink);margin:0 auto;text-align:left}
+.quote .who{display:block;text-align:right;font-style:normal;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin-top:6px}
+.btn{font:inherit;font-size:.86rem;letter-spacing:.2em;text-transform:uppercase;padding:9px 20px;border:1px solid var(--trim);background:var(--label-bg);color:var(--rose);cursor:pointer;border-radius:999px;text-decoration:none;display:inline-block}
+.btn.primary{background:var(--rose);color:var(--neutral)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}
+.list{display:grid;gap:8px;max-width:62ch;margin:0 auto;text-align:left}
+.list>div{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline}
+.list>div::before{content:"✦";color:var(--trim);font-size:.8rem}
+.list a{color:var(--rose);text-decoration:none;border-bottom:1px solid var(--trim);overflow-wrap:anywhere}
+.path{display:grid;gap:12px;width:100%;max-width:760px}
+.stop{display:grid;grid-template-columns:150px 1fr auto;gap:16px;align-items:center;text-align:left;border:1px solid var(--trim);border-radius:12px;background:var(--label-bg);padding:14px 16px;text-decoration:none;color:var(--ink)}
+.stop .n{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--rose);border:1px solid var(--trim);border-radius:999px;padding:4px 8px;background:var(--neutral);text-align:center;text-transform:uppercase}
+.stop b{font-weight:400;color:var(--rose);letter-spacing:.14em;text-transform:uppercase;font-size:.9rem;display:block}
+.stop span.d{font-size:1rem}
+.stop .go{color:var(--rose);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--trim)}
+@media (max-width:560px){.stop{grid-template-columns:auto 1fr} .stop .go{display:none}}
+.ref{font-size:.85rem;color:var(--ink-warm)}
+footer{margin-top:34px;margin-inline:-16px;background:var(--pink);color:var(--rose);border-top:1px solid var(--trim);padding:18px 16px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase}
+footer .orn{color:var(--trim-dk);letter-spacing:.5em;padding-left:.5em}
+footer a{color:var(--rose);text-decoration:none;border-bottom:1px solid var(--trim)}
+
+/* slide spacing: each block fills the window; arrow keys move between blocks */
+.wrap>header.frame,.wrap>section.frame{scroll-margin-top:16px}
+.stop.wait{opacity:.82}.stop .go.w{border-bottom:0;color:var(--ink-warm)}
+.grp{font-size:.85rem;letter-spacing:.24em;text-transform:uppercase;color:var(--rose);margin-top:10px}
+.counter{position:fixed;right:16px;bottom:16px;z-index:9;font-family:var(--mono);font-size:11px;letter-spacing:.2em;padding:6px 12px;border:1px solid var(--trim);border-radius:999px;background:var(--label-bg);color:var(--rose)}
+footer .made{flex-basis:100%;text-align:center;font-size:.62rem;letter-spacing:.16em;opacity:.75;margin-top:4px}
+/* cabinet rotation */
+.wrap>section.frame:nth-of-type(5n+1){background:#F0E8D8}
+.wrap>section.frame:nth-of-type(5n+2){background:#DAE8E4}
+.wrap>section.frame:nth-of-type(5n+3){background:#D4DAE1}
+.wrap>section.frame:nth-of-type(5n+4){background:#E7DADF}
+.wrap>section.frame:nth-of-type(5n+0){background:#EDCBCE}
+</style>
+
+<div class="wrap">
+
+<header class="frame" aria-label="Title">
+  <img class="ucam" src="img/ucam.png" alt="University of Cambridge">
+  <div class="title">
+    <div class="small">Paper 11 · Lent Term</div>
+    <h1>Land and Urban Economics</h1>
+    <div class="orn">✦ · ✦</div>
+    <div class="by">Dr Jerry Chen<br>Isaac Newton Trust Fellow &amp; Senior Teaching Associate<br>Department of Land Economy, University of Cambridge</div>
+  </div>
+  <div class="qrs">
+    <div class="qr"><div id="qr" aria-label="QR code for this page"></div><div class="aux">Scan to open this site<br><span class="url">jerchenn.com/p11</span></div></div>
+  </div>
+</header>
+
+<div class="node"><div class="stem"></div><div class="dot"></div><span class="tag">The term</span></div>
+
+<section class="frame" aria-label="The term">
+  <span class="sign">The term</span>
+  <p>Where a child grows up shapes how their life turns out. Michaelmas showed why such differences persist: amenities and disadvantages are fixed in place, land and housing prices adjust to them, and households sort by what they can pay. The Lent term asks which parts of the resulting gaps can be changed, by whom and by how much, through studies in which an intervention or a natural experiment moved an outcome.</p>
+</section>
+
+<div class="node"><div class="stem"></div><div class="dot"></div><span class="tag">Lectures</span></div>
+
+<section class="frame" aria-label="Lectures">
+  <span class="sign">Lectures</span>
+  <div class="path">
+    <div class="grp">Who lives where?</div>
+    <div class="stop wait"><span class="n">Week 9</span><span><b>Segregation and urban neighbourhoods</b><span class="d">How households sort, how segregation is measured, and Moving to Opportunity</span></span><span class="go w">In preparation</span></div>
+    <div class="stop wait"><span class="n">Week 10</span><span><b>Liveable cities</b><span class="d">Amenities, rents, and access to opportunity</span></span><span class="go w">In preparation</span></div>
+    <div class="grp">What does place do?</div>
+    <div class="stop wait"><span class="n">Week 11</span><span><b>Crime and policing</b><span class="d">Places, peers, and prevention</span></span><span class="go w">In preparation</span></div>
+    <div class="stop wait"><span class="n">Week 12</span><span><b>Education and social capital</b><span class="d">School quality and early intervention</span></span><span class="go w">In preparation</span></div>
+    <div class="stop wait"><span class="n">Week 13</span><span><b>Healthy cities</b><span class="d">Deprivation, pollution, and the health gradient</span></span><span class="go w">In preparation</span></div>
+    <div class="stop wait"><span class="n">Week 14</span><span><b>Wellbeing and mental health</b><span class="d">Relative deprivation and despair</span></span><span class="go w">In preparation</span></div>
+    <div class="grp">What can policy change?</div>
+    <div class="stop wait"><span class="n">Week 15</span><span><b>Sustainable cities</b><span class="d">Energy efficiency, carbon, and flood risk</span></span><span class="go w">In preparation</span></div>
+    <div class="stop wait"><span class="n">Week 16</span><span><b>Cities of To-Morrow</b><span class="d">People-based and place-based policy</span></span><span class="go w">In preparation</span></div>
+  </div>
+</section>
+
+<footer><span>Paper 11 · Lent Term</span><span class="orn">✦</span><span>Land and Urban Economics</span><span class="made">Created with Claude Fable 5.1 based on the lecturer's files · For use within the course and the University of Cambridge; not for distribution elsewhere</span></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>(function(){ if(window.QRCode){ new QRCode(document.getElementById("qr"),{text:"http://jerchenn.com/p11/",width:138,height:138,colorDark:"#2C1F14",colorLight:"#FAF4E8",correctLevel:QRCode.CorrectLevel.M}); } })();</script>
+<script>
+(function(){
+  const blocks=[...document.querySelectorAll('.wrap>header.frame, .wrap>section.frame')];
+  if(!blocks.length) return;
+  const current=()=>{ let best=0,bd=1e9; blocks.forEach((b,i)=>{ const d=Math.abs(b.getBoundingClientRect().top-16); if(d<bd){bd=d;best=i;} }); return best; };
+  const go=i=>{ i=Math.max(0,Math.min(blocks.length-1,i)); blocks[i].scrollIntoView({behavior:'smooth',block:'start'}); };
+  document.addEventListener('keydown',e=>{ const t=e.target; if(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT')) return;
+    if(e.key==='ArrowDown'||e.key==='PageDown'||e.key===' '||e.key==='ArrowRight'){ e.preventDefault(); go(current()+1); }
+    else if(e.key==='ArrowUp'||e.key==='PageUp'||e.key==='ArrowLeft'){ e.preventDefault(); go(current()-1); }
+    else if(e.key==='Home'){ e.preventDefault(); go(0); } else if(e.key==='End'){ e.preventDefault(); go(blocks.length-1); } });
+})();
+</script>
+</body>
+</html>
